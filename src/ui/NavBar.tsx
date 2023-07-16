@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 export default function NavBar() {
   return (
     <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between xl:justify-center gap-4 xl:gap-20 w-full'>
-      <ul className='nav flex flex-col lg:flex-row gap-6 lg:gap-4 text-schlafBlue text-sm lg:text-xs xl:text-base md:font-semibold'>
+      <ul className='nav flex flex-col lg:flex-row gap-6 lg:gap-4 xl:gap-6 text-schlafBlue text-sm lg:text-xs xl:text-base md:font-semibold'>
         <li><NavLink to='/' className={({isActive}) => isActive ? "active" : ''}>Home</NavLink></li>
         <li>About Us</li>
         <li>Mattresses</li>
@@ -37,14 +37,14 @@ export default function NavBar() {
           </div>
         </div>
 
-        <div className='flex flex-row md:gap-4'>
-          <button className='flex flex-row justify-center items-center rounded-lg px-4 py-2 xl:py-3 xl:px-5 text-white gap-1 text-xs xl:text-sm bg-schlafBlue '>
+        <div className='flex flex-col md:flex-row gap-4 md:gap-4 w-full'>
+          <button className='flex flex-row justify-center items-center rounded-lg px-4 py-1 md:py-2 xl:py-3 xl:px-5 text-white gap-1 text-xs xl:text-sm bg-schlafBlue '>
             <span className='text-xl'><MdOutlinePersonOutline/></span>
             <span>My Account</span>
             <span><BsChevronDown/></span>
           </button>
 
-          <button className='flex flex-row justify-center items-center rounded-lg px-4 py-2 xl:py-3 xl:px-5 text-white gap-1 text-xs xl:text-sm bg-schlafBlue '>
+          <button className='flex flex-row justify-center items-center rounded-lg px-4 py-1 md:py-2 xl:py-3 xl:px-5 text-white gap-1 text-xs xl:text-sm bg-schlafBlue '>
             <span><BsFillHandbagFill/></span>
             <span>(0)</span>
             <span>Item</span>

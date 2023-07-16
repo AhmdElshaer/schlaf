@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'schlafBlue': '#14325c'
+        'schlafBlue': '#112857'
+        // 'schlafBlue': '#14325c'
       }
     },
   },
