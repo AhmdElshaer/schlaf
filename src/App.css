@@ -19,15 +19,28 @@ html{
   border-radius: 50%;
   transition: 0.3s;
 }
-.mattress .swiper-button-next,
-.mattress .swiper-button-prev {
-  color: #e35a00 !important;
-  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
-}
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   border-width: 1px;
   border-color: #e35a00 !important;
+}
+.mattress .swiper-button-next,
+.mattress .swiper-button-prev {
+  color: #e35a00 !important;
+  background-color: white;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+}
+.mattress .swiper-button-next::after,
+.mattress .swiper-button-prev::after {
+  font-size: 20px !important;
+}
+.mattress .swiper-button-next{
+  right: 0 !important;
+  top: 30% !important;
+}
+.mattress .swiper-button-prev{
+  left: 0 !important;
+  top: 30% !important;
 }
 
 .nav .active{
@@ -64,3 +77,18 @@ html{
   left: 0;
 }
 
+.zoom:hover img{
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+.zoom:hover {
+  transition: 0.5s;
+}
+
+.mattress-card:hover .m-title{
+  color:white;
+}
+.mattress-card:hover .m-title{
+  border-color: white;
+}
