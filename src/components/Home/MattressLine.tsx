@@ -1,15 +1,13 @@
 import React from "react";
 import { Tabs, TabsHeader, TabsBody, Tab, TabPanel, } from "@material-tailwind/react";
 import { useQuery } from '@tanstack/react-query';
-import { FetchMattress } from "../../config/config";
+import { FetchProducts } from "../../config/homePageConfig";
 import MattressSwiper from "../../ui/MattressSwiper";
 
 
 export default function MattressLine() {
   
-  const { data, status } = useQuery(['mattress'], FetchMattress);
-
-  console.log(data);
+  const { data, status } = useQuery(['mattress'], FetchProducts);
 
   if(status === 'loading') {
     return <div className='text-center text-5xl font-bold'>Loading...</div>
@@ -35,7 +33,7 @@ export default function MattressLine() {
 
   return (
   <div className="mattress container mx-auto flex flex-col justify-center items-center gap-6 md:gap-8 px-4">
-    <div className="text-2xl md:text-3xl font-semibold text-orange-600">Our Mattress Line</div>
+    <div className="text-2xl md:text-3xl font-bold text-orange-600">Our Mattress Line</div>
 
     <Tabs value="dashboard" className='!w-full'>
       <TabsHeader className="!bg-schlafBlue !rounded-none !w-full !py-2 md:!py-3">

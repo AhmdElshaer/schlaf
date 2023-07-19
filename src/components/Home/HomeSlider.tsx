@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper';
 import { useQuery } from '@tanstack/react-query';
-import { FetchSliders } from '../config/config';
+import { FetchSliders } from '../../config/homePageConfig';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { SliderType } from '../model/Types';
+import { SliderType } from '../../model/Types';
 
 export default function HomeSlider() {
 
@@ -38,7 +38,6 @@ export default function HomeSlider() {
         <SwiperSlide key={item.id} className='flex md:items-start overflow-hidden'>
           {({ isActive }) => (<div className='w-screen h-full relative flex justify-center items-center md:items-start'>
             <img loading='lazy'
-            // src={`${process.env.IMAGE_URL}${item.image}`}
             src='https://www.schlafmeister.com/_next/image/?url=http%3A%2F%2Fdemos-iconcreations.com%2FSchlafMiestrAdmin%2Fassets%2FsliderImages%2Fimg3.jpg&w=3840&q=65'
             alt='slider-img' className='object-cover h-full w-full absolute left-0 z-10' />
 

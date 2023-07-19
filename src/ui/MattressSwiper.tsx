@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { ProductType } from '../model/Types';
 import OrangeButton from './OrangeButton';
 
-const MattressSwiper = (props: {products: ProductType[]}) => {
+const MattressSwiper = (props: {products: ProductType[] | undefined}) => {
 
   
   return (
@@ -24,8 +24,8 @@ const MattressSwiper = (props: {products: ProductType[]}) => {
         1024: { slidesPerView: 2, spaceBetween: 20,},
         1200: { slidesPerView: 3, spaceBetween: 30,},
       }}>
-      {props?.products.map((item)=>
-        <SwiperSlide className='w-full shadow-2xl drop-shadow-2xl' key={item?.id}>
+      {props?.products && props?.products.map((item)=>
+        <SwiperSlide className='w-full shadow-md shadow-black/20 dark:shadow-black/40 border rounded' key={item?.id}>
           <div className='zoom w-full flex flex-col justify-center items-center '>
             <div className='w-full truncate'>
               <img src={`${process.env.PUBLIC_URL}/assets/Bliss-Fortune120.jpg`} alt='productImage' className='w-full object-cover' />
